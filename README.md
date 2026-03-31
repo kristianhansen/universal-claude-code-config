@@ -1,5 +1,8 @@
 # universal-claude-code-config
 
+<img width="372" height="98" alt="Screenshot 2026-03-31 at 12 21 35 PM" src="https://github.com/user-attachments/assets/fea547ab-dc31-4fa5-bd06-d924c0837325" />
+
+
 A global [Claude Code](https://claude.ai/code) configuration that installs into `~/.claude/` and applies sensible engineering defaults across every project you work on.
 
 Covers: code standards, security, testing, accessibility, git, Docker, AI/LLM work, and workflow conventions — plus two slash commands (`/project-memory` and `/accessibility`) that auto-discover context and run audits.
