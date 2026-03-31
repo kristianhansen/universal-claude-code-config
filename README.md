@@ -17,7 +17,7 @@ curl -fsSL https://raw.githubusercontent.com/kristianhansen/universal-claude-cod
 ### Homebrew
 
 ```bash
-brew tap kristianhansen/tap
+brew tap kristianhansen/universal-claude-code-config
 brew install claude-config
 ```
 
