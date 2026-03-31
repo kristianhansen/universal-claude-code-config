@@ -7,6 +7,7 @@ set -e
 REPO="https://raw.githubusercontent.com/kristianhansen/universal-claude-code-config/main"
 CLAUDE_DIR="$HOME/.claude"
 BACKUP_DIR="$CLAUDE_DIR/backups/claude-config-$(date +%Y%m%d%H%M%S)"
+VERSION_FILE="$CLAUDE_DIR/.claude-config-version"
 
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -43,11 +44,17 @@ for file in project-memory.md accessibility.md; do
   echo -e "${GREEN}✓${NC} commands/$file"
 done
 
+# Write installed version (latest release tag, or "main" if unavailable)
+LATEST=$(curl -fsSL "https://api.github.com/repos/kristianhansen/universal-claude-code-config/releases/latest" 2>/dev/null | grep '"tag_name"' | sed 's/.*"tag_name": "\(.*\)".*/\1/' || echo "main")
+echo "$LATEST" > "$VERSION_FILE"
+
 echo ""
-echo -e "${GREEN}Done!${NC}"
+echo -e "${GREEN}Done! Installed $LATEST${NC}"
 echo ""
 echo "Next steps:"
 echo "  1. Open ~/.claude/CLAUDE.md"
 echo "  2. Add your name in the Identity & Communication section"
 echo "  3. Uncomment and fill in your stack in the Technology Standards section"
+echo ""
+echo "To upgrade later: curl -fsSL $REPO/upgrade.sh | bash"
 echo ""

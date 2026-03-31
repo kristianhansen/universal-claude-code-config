@@ -43,6 +43,26 @@ cp commands/* ~/.claude/commands/
 
 ---
 
+## Upgrade
+
+### curl
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kristianhansen/universal-claude-code-config/main/upgrade.sh | bash
+```
+
+The upgrade script checks your installed version against the latest release, shows the release notes, and asks before overwriting anything. Your existing `CLAUDE.md` is backed up to `~/.claude/backups/` automatically.
+
+### Homebrew
+
+```bash
+brew update && brew upgrade claude-config
+```
+
+Homebrew upgrades are handled automatically — the formula is updated every time a new release is published.
+
+---
+
 ## Uninstall
 
 ```bash
