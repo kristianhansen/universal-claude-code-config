@@ -1,7 +1,10 @@
 # universal-claude-code-config
 
-<img width="372" height="98" alt="Screenshot 2026-03-31 at 12 21 35 PM" src="https://github.com/user-attachments/assets/fea547ab-dc31-4fa5-bd06-d924c0837325" />
+<img width="372" height="98" alt="Screenshot 2026-03-31 at 12 21 35 PM" src="https://github.com/user-attachments/assets/fea547ab-dc31-4fa5-bd06-d924c0837325" />
 
+[![ShellCheck](https://github.com/kristianhansen/universal-claude-code-config/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/kristianhansen/universal-claude-code-config/actions/workflows/shellcheck.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/github/v/release/kristianhansen/universal-claude-code-config)](https://github.com/kristianhansen/universal-claude-code-config/releases/latest)
 
 A global [Claude Code](https://claude.ai/code) configuration that installs into `~/.claude/` and applies sensible engineering defaults across every project you work on.
 
@@ -37,6 +40,16 @@ cp CLAUDE.md ~/.claude/CLAUDE.md
 cp docs/* ~/.claude/docs/
 cp commands/* ~/.claude/commands/
 ```
+
+---
+
+## Uninstall
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kristianhansen/universal-claude-code-config/main/uninstall.sh | bash
+```
+
+Your original files are backed up to `~/.claude/backups/` before any install or uninstall runs.
 
 ---
 
@@ -87,3 +100,5 @@ For project-specific rules, add a `CLAUDE.md` to your project root — Claude Co
 ## Contributing
 
 PRs welcome. Keep rules general enough to apply across teams — project-specific conventions belong in the project's own `CLAUDE.md`.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
