@@ -3,10 +3,10 @@ name: ShellCheck
 on:
   push:
     paths:
-      - 'install.sh'
+      - '*.sh'
   pull_request:
     paths:
-      - 'install.sh'
+      - '*.sh'
 
 jobs:
   shellcheck:
