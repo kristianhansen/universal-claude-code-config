@@ -61,6 +61,30 @@ Your original files are backed up to `~/.claude/backups/` before any install or 
 
 ---
 
+## What it configures
+
+Every section of `CLAUDE.md` is intentional. Here's what each one does and why it matters:
+
+| Section | What it does |
+|---|---|
+| **Identity & Communication** | Sets your name and establishes Claude as a senior engineer on your team — not a chatbot. You get direct answers, not hedged ones. |
+| **Session Startup** | At the start of every session, Claude reads your project's `CLAUDE.md`, checks for context folders, and summarizes what it knows before touching anything. No more re-explaining your project every time. |
+| **Commits** | Strips AI attribution from commit messages so your git history stays clean and professional. |
+| **Security** | Claude scans for secrets, PII, and credentials before every push. Enforces parameterized queries, input validation, and safe logging — automatically, on every project. |
+| **Code Standards** | Keeps Claude in its lane: no unsolicited refactors, no clever rewrites, no renaming things "improved" or "new". Changes are surgical and scoped to what you asked for. |
+| **Testing** | Enforces TDD — tests are written alongside code, not as an afterthought. Claude never skips coverage or ignores failing output. |
+| **General Coding Behavior** | Prevents scope creep. No speculative abstractions, no extra error handling, no helper utilities built for one use. Code stays simple. |
+| **Workflow** | Claude discusses a plan before implementing anything non-trivial, works in small testable increments, and flags problems rather than silently fixing them in ways you didn't ask for. |
+| **Technology Standards** | Links to your stack-specific doc files (`python.md`, `aws.md`, etc.) so conventions are consistent whether you're in a FastAPI backend or a React frontend. |
+| **Docker & Infrastructure** | Pins base image versions, prefers `COPY` over `ADD`, and documents exposed ports — the basics that get skipped under pressure. |
+| **AI/LLM Work** | Structures every prompt with a system role, user turn, and output format. Enforces JSON outputs for tool-use flows so agent pipelines stay predictable. |
+| **Accessibility** | Treats accessibility as a bug, not a backlog item. Claude runs audits after every UI change — Lighthouse for web, label checks for mobile, contrast for CLI — and blocks shipping critical issues. |
+| **Explanations** | When you ask "why", you get the engineering rationale — trade-offs, risks, constraints — not a textbook definition. |
+| **Scope Guard** | If a task touches more than 3 files, Claude stops and confirms before proceeding. Prevents well-intentioned changes from becoming sprawling diffs. |
+| **Style** | No emojis, no trailing summaries, no padding. Responses are short, direct, and lead with the answer. |
+
+---
+
 ## What's included
 
 ```
