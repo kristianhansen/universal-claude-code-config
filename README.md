@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/github/v/release/kristianhansen/universal-claude-code-config)](https://github.com/kristianhansen/universal-claude-code-config/releases/latest)
 
-A global [Claude Code](https://claude.ai/code) configuration that installs into `~/.claude/` and applies sensible engineering defaults across every project you work on.
+A global Claude Code configuration that installs into `~/.claude/` and applies sensible engineering defaults across every project you work on.
 
 Covers: code standards, security, testing, accessibility, git, Docker, AI/LLM work, and workflow conventions — plus two slash commands (`/project-memory` and `/accessibility`) that auto-discover context and run audits.
 
